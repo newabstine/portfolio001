@@ -3,7 +3,8 @@
 /* 전체설정 */
 * {
     margin: 0;
-    padding: 0;}
+    padding: 0;
+    box-sizing: border-box;}
 ul, ol {list-style: none;}
 a {
     text-decoration: none;
@@ -13,29 +14,26 @@ img {
     vertical-align: bottom;}
 
 body {font-family: 'Nanum Gothic', sans-serif;}
-
+/* 레이아웃설정 */
+header {width: 15%;}
+section {}
 
 
 
 /* 헤더설정 */
 .boxA {
     background-color: #F7F6F2;
-    width: 15%;
+    width: 10%;
     height: 100%;
     position: fixed;
+    padding: 10px 5px;
 }
-
-/* 네비 설정 */
-.nav {
-    background-color: #F7F6F2;
-    width: 15%;
-    height: 100%;
-    position: fixed;
-}
-
 
 
 /* 로고 */
+.boxA-1 {
+    padding-left: 10%;
+}
 .logo {
     width: 163px;
     height: 92px;
@@ -44,13 +42,28 @@ body {font-family: 'Nanum Gothic', sans-serif;}
     background-size: contain;
     background-repeat: no-repeat;
 
-
 }
+
 .logo a {
     display: block;}
 .logo a:hover {}
 
 
+/* 네비 설정 */
+
+.nav {
+    background-color: #F7F6F2;
+    width: 100%;
+    height: 100%;
+    position: sticky;
+    top: 150px;
+    left: 0px;
+    height: 40vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
 /* 메뉴 */
 
@@ -59,20 +72,23 @@ body {font-family: 'Nanum Gothic', sans-serif;}
 .manu ul li {}
 .manu li a {
     display: block;
-    padding: 10px 15px;
+    padding: 15px 15px;
+    
 }
 .manu li a:hover {
     background-color: #F84C26;
     color: #F7F6F2;
 }
 
-/* 메뉴하단 */
-
+/* 로그인설정 */
 
 .login {}
 .login ul {}
 .login ul li {}
-.login li a {}
+.login li a {
+    display: block;
+    padding: 15px 15px;
+}
 .login li a:hover {
     background-color: #F84C26;
     color: #F7F6F2;
@@ -84,12 +100,25 @@ body {font-family: 'Nanum Gothic', sans-serif;}
 
 
 .hero {
-    width: 85%;
-    height: 80vh;
-    margin-left: 15%;
+
+    width: 100%;
+    height: 800px;
     }
 
-.hero img {width: 100%;}
+.hero img {max-width: 100%;}
+
+
+/* 관람안내 설정 */
+
+.viewingGuide {
+    width: 100%;
+    height: 800px;
+    position: absolute;
+    top: 800px;}
+.viewingGuide ul {}
+.viewingGuide ul li {}
+
+
 
 
 
@@ -97,9 +126,9 @@ body {font-family: 'Nanum Gothic', sans-serif;}
 
 
 .hero2 {
-    width: 85%;
+    width: 90%;
     height: 100%;
-    margin-left: 15%;
+    margin-left: 10%;
     
     background-color: #F84C26;
     box-sizing: border-box;
@@ -116,9 +145,9 @@ body {font-family: 'Nanum Gothic', sans-serif;}
 /* 특별전시 배너 설정 */
 
 .b001 {
-    width: 85%;
+    width: 90%;
     height: 100%;
-    margin-left: 15%;
+    margin-left: 10%;
     background-color: #F84C26;
     }
 
@@ -131,9 +160,9 @@ body {font-family: 'Nanum Gothic', sans-serif;}
 
 /* 프로그램설정 */
 .pro {
-    width: 85%;
+    width: 90%;
     height: 100%;
-    margin-left: 15%;
+    margin-left: 10%;
     background-color: #F84C26;
     }
 
@@ -154,9 +183,7 @@ body {font-family: 'Nanum Gothic', sans-serif;}
 
 /* 좌우 여백설정 */
 
-.box1-2, .box3-1, .box3-3, .box3-4, .box4, .box5 {
-    margin-left: 15%;
-}
+.boxA .boxB {margin-left: 10%;}
 
 
 
