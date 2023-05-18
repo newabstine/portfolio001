@@ -1,0 +1,878 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+/* 전체설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+img {
+    border: none;
+    vertical-align: bottom;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    overflow-x: hidden;
+}
+
+/* 레이아웃설정 */
+header {
+    width: 15%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: #F7F6F2;
+    z-index: 10;
+}
+
+section {
+    width: 85%;
+    margin-left: 15%;
+}
+
+
+
+
+/* 로고설정 */
+
+.logo {
+    width: 200px;
+    height: 100px;
+    background-image: url(../img/logo/logo_1.png);
+    text-indent: -9999px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 50%;
+    top: 50px;
+    margin-left: -100px;
+}
+
+
+
+/* 메뉴들 a호버 가로값을 유지한 채 
+글씨만 로고 왼쪽에 정렬을 하고 싶습니다! */
+
+
+/* 메뉴설정 */
+
+.menu {
+    position: absolute;
+    top: 20%;
+    left: 15%;}
+.menu ul {}
+.menu li {}
+.menu li a {
+    display: block;
+    padding: 10px 50px;
+    color: #F84C26;
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 36px;
+    letter-spacing: -0.05em;}
+
+.menu li a span {
+}
+.menu li a:hover {
+    background-color: #F84C26;
+    color: #F7F6F2;
+}
+
+
+/* 로그인설정 */
+
+.login {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+}
+.login ul {}
+.login li {}
+.login li a {
+    display: block;
+    padding: 10px;
+    color: #F84C26;
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 36px;
+    letter-spacing: -0.05em;;
+}
+.login li a:hover {
+    background-color: #F84C26;
+    color: #F7F6F2;
+    
+}
+
+
+
+/* section설정 */
+
+/* box1설정 */
+
+.box1 {
+    width: 100%;
+    height: 100vh;
+}
+
+.box1-1 {
+    height: 80vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.box1-1 img {
+    width: 100%;
+}
+
+.box1-2 {
+    height: 20vh;
+    background-color: #F7F6F2;
+    padding: 30px 60px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* 관람시간 구역 설정 */
+
+/* .box1-2>div {
+    border-bottom: 2px #F84C26 solid;
+    padding: 12px 30px 35px 0;
+} */
+
+
+.view001, .view002 {
+    width: 80%;
+}
+
+.info_area {
+    width: calc(100% - 300px);
+    float: left;
+    padding: 10px 0 10px 0;
+    border-bottom: 3px solid #F84C26;
+}
+
+
+.info_area {}
+
+.info_area li {
+    display: block;
+    margin-right: 70px;
+    margin-bottom: 15px;
+}
+
+
+.info_area li .info_tit {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 24px;
+        color: #F84C26;
+        font-weight: bold;
+    }
+
+.info_txt {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.info_txt strong {
+    margin: 0 15px;
+    font-size: 18px;
+    color: #414042;
+    font-weight: bold;
+}
+
+.info_txt span {
+        font-size: 18px;
+        color: #414042;
+        font-weight: normal;
+    }
+
+/* 예약안내 설정 */
+
+
+.info_link {
+    padding: 0 10px;
+    width: 280px;
+    margin-left: 20px;
+    margin-top: 50px;
+}
+
+.view002 {
+    display: inline-block;;
+    padding: 10px 0 10px 0;
+
+    
+}
+
+.view002 ul {
+    display: flex;
+
+}
+.info_link ul li {
+    margin-left: 20px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #F84C26;
+}
+
+.info_link a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #F84C26;
+}
+.info_link .txt{
+    padding: 10px 0 10px 0;
+}
+
+.info_link .btn-o {} 
+
+
+
+
+/* 박스2설정 */
+.box2 {
+    width: 100%;
+    height: 140vh;
+    text-align: center;
+    background-color: #F84C26;
+    padding-bottom: 50px;
+
+}
+
+.box2 img {max-width: 100%;}
+
+/* 박스3설정 */
+
+.box3 {
+    background-color: #F84C26;
+    width: 100%;
+    position: relative;
+}
+.box3-1 {
+    display: flex;
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+    border-bottom: #F7F6F2 2px solid;
+    border-top: #F7F6F2 2px solid;
+    margin-bottom: 100px;
+
+}
+.exTitle {width: 30%;}
+.exTitle strong {
+    font-weight: 700;
+    font-size: 40px;
+    color: #F7F6F2;
+}
+.exTitle span {
+font-weight: 400;
+font-size: 40px;
+color: #F7F6F2;
+}
+
+.exTxt {width: 50%;}
+.exTxt {
+    color: #F7F6F2;
+    font-style: normal;
+    font-weight: 350;
+    font-size: 18px;
+}
+
+/* 전시구역 배너 설정 */
+
+.box3-2 {
+    max-width: 80%;
+    overflow: hidden;
+    margin: auto;
+    margin-bottom: 30px;
+}
+.b001 {}
+.b001 img {width: 100%;}
+
+
+/* 상설전시 외2 버튼 */
+.box3-3 {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+.box3-3 ul {
+    display: flex;
+    justify-content: center;
+}
+
+.box3-3 li {
+    padding: 20px;
+}
+
+.box3-3 li a {
+    display: block;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    width: 200px;
+    height: 60px;
+    text-align: center;
+    color: #F7F6F2;
+    border: 2px solid #F7F6F2;
+    border-radius: 50px;
+}
+
+.box3-3 li a:hover {
+    background-color: #F7F6F2;
+    color: #F84C26;
+    border-radius: 50px;
+}
+
+/* 전시 상세 설명  */
+
+/* .box3-4>div {
+    position: absolute;
+    width: 80%;
+    left: 50%;
+    margin-left: -35%;
+    background-color: #def700;
+    display: flex;
+    align-items: center;
+} */
+
+.box3-4 {
+    width: 100%;;
+    height: 100vh;
+    position: relative;
+    /* background-color: #F84C26; */
+}
+
+/* 콘텐츠1 */
+.conBox001 {
+width: 80%;
+height: 660px;
+    margin: 0 auto;
+    padding: 30px 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(247, 246, 242, 0.3);
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
+    align-items: center;
+}
+.conBox001>p {width: 30%;
+            height: 80%;
+
+    margin-right: 50px;}
+.conBox001 img {max-height: 100%;}
+
+.conBox001 .txtBox {}
+
+.conBox001 h2 {
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: #F7F6F2 2px solid;
+    font-weight: 700;
+    font-size: 35px;
+    color: #F7F6F2;
+}
+.txtBox .txt1 {
+    width: 100%;
+    padding: 20px 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 40px;
+    color: #F7F6F2;
+    margin-bottom: 20px;
+    border-bottom: #F7F6F2 2px solid;
+}
+.txtBox .txt2 {
+    width: 100%;
+    font-weight: 500;
+    font-size: 35px;
+    color: #F7F6F2;
+}
+/* 콘텐츠2 */
+
+.conBox002 {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    margin-left: -35%;
+    display: flex;
+    justify-content: center;
+    background-color: cornflowerblue;
+    }
+.conBox003 {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    margin-left: -35%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(100, 237, 237);
+    }
+
+
+
+
+/* 전시배너 숨기기 */
+
+.conBox002, .conBox003 {
+    display: none;
+}
+
+
+
+/* 공지사항 틀을 잡지 못하겠어요  */
+
+
+
+
+/* 알리는 글 구간 설정 */
+
+.box4 {
+    width: 100%;
+    height: 100vh;
+    background-color: #9c9575;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    position: relative;
+}
+/* 알리는글 타이틀 */
+
+.box4-1 {
+    display: flex;
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+    border-bottom: #F84C26 2px solid;
+    border-top: #F84C26 2px solid;
+    margin-bottom: 100px;
+
+}
+.notiTitle {width: 30%;}
+
+.notiTitle strong {
+    font-weight: 700;
+    font-size: 40px;
+    color: #F84C26;
+}
+.notiTitle span {
+font-style: normal;
+font-weight: 400;
+font-size: 40px;
+color: #F84C26;
+}
+.notiTxt {width: 50%;}
+.notiTxt {
+    color: #F84C26;
+    font-style: normal;
+    font-weight: 350;
+    font-size: 18px;
+}
+
+/* 공지사항 제목 */
+.box4-2 {
+    width: 80%;
+    background-color: #F84C26;}
+
+.box4-2 ul {display: flex;}
+
+.box4-2 ul li {
+    width: 80%;
+    border-radius: 12px;
+}
+.box4-2 li a {
+    display: block;
+    padding: 15px;
+    color: #F7F6F2;
+    
+}
+.box4-2 li span {}
+.box4-2 li a:hover {}
+
+.box4-2, .box4-3 {
+    justify-content: center;
+}
+
+/* 박스4-2, 박스4-3 왼쪽 여백 설정 */
+.box4-2, .box4-3{
+    margin-left: 10%;
+}
+
+/* 공지사항 본문 */
+.box4-3 {
+    width: 80%;
+    height: 50vh;
+    background-color:#F84C26;
+    padding: 10px;
+}
+
+.box4-3 {}
+.box4-3 ul {}
+.box4-3 li {
+    padding: 10px;
+}
+.box4-3 li a {
+    color: #F7F6F2;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+}
+.box4-3 li strong {
+    color: #F7F6F2;
+    font-weight: 500;
+    font-size: 30px;
+}
+.box4-3 li span {
+    color: #F7F6F2;
+    font-size: 25px;
+}
+
+/* 이벤트 구간 설정 */
+.box5 {
+    width: 100%;
+    height: 100vh;
+    background-color: #F7F6F2;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    position: relative;
+}
+
+/* 이벤트 타이틀 설정 */
+
+.box5-1 {
+    display: flex;
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+    border-bottom: #F84C26 2px solid;
+    border-top: #F84C26 2px solid;
+    margin-bottom: 100px;
+
+}
+.enTitle {width: 30%;}
+
+.enTitle strong {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    color: #F84C26;
+}
+.enTitle span {
+font-style: normal;
+font-weight: 400;
+font-size: 40px;
+color: #F84C26;
+}
+.enTxt {width: 50%;}
+.enTxt {
+    color: #F84C26;
+    font-style: normal;
+    font-weight: 350;
+    font-size: 18px;
+}
+
+
+.box5-2 {
+    display: flex;
+    width: 80%;
+}
+
+
+.box5-2-1 {}
+.box5-2-1 a {}
+.box5-2-1 img {}
+
+.box5-2-2 {}
+.box5-2-2 h2 {}
+.box5-2-2 p {}
+
+
+
+/* 프로그램 본문 내용 컨트롤하기가 어렵습니다 */
+
+
+
+/* 프로그램 설정 */
+
+.box6 {
+    width: 100%;
+    height: 100vh;
+    background-color: #F7F6F2;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+/* 프로그램 타이틀 설정 */
+.box6-1 {
+    display: flex;
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+    border-bottom: #F84C26 2px solid;
+    border-top: #F84C26 2px solid;
+    margin-bottom: 100px;
+
+}
+.proTitle {width: 30%;}
+
+.proTitle strong {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    color: #F84C26;
+}
+.proTitle span {
+font-style: normal;
+font-weight: 400;
+font-size: 40px;
+color: #F84C26;
+}
+.proTxt {width: 50%;}
+.proTxt {
+    color: #F84C26;
+    font-style: normal;
+    font-weight: 350;
+    font-size: 18px;
+}
+/* 프로그램 본문 설정 */
+
+.box6-2 {
+    display: flex;
+    width: 80%;
+    height: 80vh;
+    background-color: aqua;
+    margin-left: 10%;
+    margin-right: 20px;}
+    
+.pro1 {}
+.pro1 a {}
+.pro1 a>img {max-width: 100%;}
+.proTxt {}
+.proTxt span {}
+.proTxt a {}
+.proTxt p {}
+
+
+
+
+/* .pro ul {
+    display: flex;
+    padding: 20px;}
+.pro ul li {
+    width: 100%;
+    padding: 15px;
+}
+.pro li a {}
+.pro a img {max-width: 100%;} */
+
+
+
+
+
+/* 주소내용을 지도 위에 
+반투명하게 올려야하는데 감이 잡히지 않습니다. */
+
+
+
+
+
+
+/* 오시는길 구간 설정 */
+.box7 {
+    width: 100%;
+    height: 100vh;
+    background-color: #F7F6F2;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+}
+
+/* 오시는길 타이틀 설정 */
+.box7-1 {
+    display: flex;
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+    border-bottom: #F84C26 2px solid;
+    border-top: #F84C26 2px solid;
+    margin-bottom: 100px;
+}
+
+.mapTitle {width: 30%;}
+
+.mapTitle strong {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    color: #F84C26;
+}
+.mapTitle span {
+font-style: normal;
+font-weight: 400;
+font-size: 40px;
+color: #F84C26;
+}
+.mapTxt {width: 50%;}
+.mapTxt {
+    color: #F84C26;
+    font-style: normal;
+    font-weight: 350;
+    font-size: 18px;
+}
+
+/* 오시는 길 본문 설정 */
+.map {
+    width: 100%;
+    height: 80vh;
+    margin-left: 10%;}
+
+.box7-2 {
+    margin-bottom: 30px;
+}
+.box7-2 img {max-width: 100%;}
+
+.box7-3 {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 푸터 설정 */
+
+footer {
+    width: 100%;
+    height: 20vh;
+    background-color: #F84C26;
+    position: relative;
+    z-index: 12;
+}
+
+.foot {
+    padding: 20px;
+}
+.icon {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sns {
+    color: #F7F6F2;
+    font-size: 50px;
+}
+
+.fo_logo {
+    }
+
+.copyTxt {
+    display: flex;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #F7F6F2;
+}
+.copyTxt ul{
+    color: #F7F6F2;
+}
+.copyTxt li:nth-child(1) {
+    padding: 0 10px;
+    color: #F7F6F2;
+    font-style: normal;
+    font-size: 16px;
+    /* border-right: 1px solid #F7F6F2; */
+}
+.copyTxt li:nth-child(2) {
+    padding: 0 10px;
+    color: #F7F6F2;
+    font-style: normal;
+    font-size: 16px;
+    /* border-right: 1px solid #F7F6F2; */
+}
+.copyTxt li:nth-child(3) {
+    padding: 0 10px;
+    color: #F7F6F2;
+    font-style: normal;
+    font-size: 16px;
+}
+.copyTxt span{
+    color: #F7F6F2;
+}
+.copy {
+    color: #F7F6F2;
+    font-size: 16px;
+    font-style: normal;
+    padding: 0 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 미디어 쿼리 구간///////////////////////// */
+
+
+
+
+
+/* 788px 이상구간 */
+
+@media (min-width:768px) {
+    /* 레이아웃설정 */
+
+
+
+
+
+    /* 박스1 과 박스2 의 세로정렬 */
+
+
+
+
+}
+
+/* 1024px 이하 구간 */
+
+

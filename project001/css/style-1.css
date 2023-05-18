@@ -25,6 +25,7 @@ img {
 
 body {
     font-family: 'Noto Sans KR', sans-serif;
+    overflow-x: hidden;
 }
 
 /* 레이아웃설정 */
@@ -35,6 +36,7 @@ header {
     top: 0;
     height: 100%;
     background-color: #F7F6F2;
+    z-index: 10;
 }
 
 section {
@@ -60,25 +62,38 @@ section {
     margin-left: -100px;
 }
 
+
+
+/* 메뉴들 a호버 가로값을 유지한 채 
+글씨만 로고 왼쪽에 정렬을 하고 싶습니다! */
+
+
 /* 메뉴설정 */
 
 .menu {
     position: absolute;
     top: 20%;
-    left: 15%;}
-.menu ul {}
-.menu li {}
+    left: 15%;
+}
+.menu ul {
+    width: 100%;
+    border-bottom: 2px solid #F84C26;
+}
+.menu li {
+    width: 100%;
+}
 .menu li a {
     display: block;
-    padding: 10px;
+    padding: 10px 40px;
     color: #F84C26;
-    font-family: 'Noto Sans KR';
     font-style: normal;
-    font-weight: 400;
     font-size: 20px;
-    line-height: 36px;
-    letter-spacing: -0.05em;}
+    line-height: 35px;
+    letter-spacing: -0.05em;
+    text-align: left;}
 
+.menu li a span {
+}
 .menu li a:hover {
     background-color: #F84C26;
     color: #F7F6F2;
@@ -96,15 +111,14 @@ section {
 .login li {}
 .login li a {
     display: block;
-    padding: 10px;
+    padding: 10px 50px;
     color: #F84C26;
-    font-family: 'Noto Sans KR';
     font-style: normal;
-    font-weight: 400;
     font-size: 20px;
-    line-height: 36px;
-    letter-spacing: -0.05em;;
+    line-height: 35px;
+    letter-spacing: -0.05em;
 }
+
 .login li a:hover {
     background-color: #F84C26;
     color: #F7F6F2;
@@ -187,13 +201,13 @@ section {
 .info_txt strong {
     margin: 0 15px;
     font-size: 18px;
-    color: #414042;
+    color: #202020;
     font-weight: bold;
 }
 
 .info_txt span {
         font-size: 18px;
-        color: #414042;
+        color: #202020;
         font-weight: normal;
     }
 
@@ -210,8 +224,6 @@ section {
 .view002 {
     display: inline-block;;
     padding: 10px 0 10px 0;
-
-    
 }
 
 .view002 ul {
@@ -234,7 +246,10 @@ section {
 }
 
 .info_link .btn-o {} 
-
+.btn-o:hover {
+    background-color: #F84C26;
+    color: #F7F6F2;
+} 
 
 
 
@@ -255,7 +270,6 @@ section {
 .box3 {
     background-color: #F84C26;
     width: 100%;
-
     position: relative;
 }
 .box3-1 {
@@ -271,19 +285,16 @@ section {
 }
 .exTitle {width: 30%;}
 .exTitle strong {
-    font-family: 'Noto Sans KR';
-    font-style: normal;
     font-weight: 700;
     font-size: 40px;
     color: #F7F6F2;
 }
 .exTitle span {
-    font-family: 'Noto Sans KR';
-font-style: normal;
 font-weight: 400;
 font-size: 40px;
 color: #F7F6F2;
 }
+
 .exTxt {width: 50%;}
 .exTxt {
     color: #F7F6F2;
@@ -322,7 +333,7 @@ color: #F7F6F2;
 .box3-3 li a {
     display: block;
     font-style: normal;
-    font-weight: 700;
+    font-weight: bold;
     font-size: 35px;
     width: 200px;
     height: 60px;
@@ -359,20 +370,27 @@ color: #F7F6F2;
 
 /* 콘텐츠1 */
 .conBox001 {
-
-   width: 80%;
-   margin: 0 auto;
-   padding: 30px 0;
-   box-sizing: border-box;
+    width: 80%;
+    height: 660px;
+    margin: 0 auto;
+    padding: 30px 0;
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
     background-color: rgba(247, 246, 242, 0.3);
     backdrop-filter: blur(2px);
     border-radius: 20px;
-    
-    }
-.conBox001 img {
-  max-width: 100%;}
+    align-items: center;
+}
+.conBox001>p {
+    width: 30%;
+    height: 80%;
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.conBox001 img {max-height: 100%;}
 
 .conBox001 .txtBox {}
 
@@ -432,12 +450,16 @@ color: #F7F6F2;
 }
 
 
+
+/* 공지사항 틀을 잡지 못하겠어요  */
+
+
+
+
 /* 알리는 글 구간 설정 */
 
 .box4 {
     width: 100%;
-    height: 100vh;
-    text-align: center;
     background-color: #F7F6F2;
     padding-top: 100px;
     padding-bottom: 100px;
@@ -459,7 +481,6 @@ color: #F7F6F2;
 .notiTitle {width: 30%;}
 
 .notiTitle strong {
-    font-style: normal;
     font-weight: 700;
     font-size: 40px;
     color: #F84C26;
@@ -479,33 +500,83 @@ color: #F84C26;
 }
 
 /* 공지사항 제목 */
-.box4-2 {width: 100%;}
-.box4-2 ul {display: flex;}
+.box4-2 {
+    width: 80%;}
+
+.box4-2 ul {
+    display: flex;}
 
 .box4-2 ul li {
-    width: 80%;
-    left: 50%;
+    background-color: #F84C26;
+    border-radius: 12px 12px 0px 0px;
+    opacity: 0.7;
 }
 .box4-2 li a {
     display: block;
     padding: 15px;
+    color: #F7F6F2;
+    font-weight: 700;
+    font-size: 35px;
 }
 .box4-2 li span {}
-.box4-2 li a:hover {}
+.box4-2 li a:hover {
+
+}
+
+.box4-2, .box4-3 {
+    justify-content: center;
+}
+
+/* 박스4-2, 박스4-3 왼쪽 여백 설정 */
+.box4-2, .box4-3{
+    margin-left: 10%;
+}
 
 /* 공지사항 본문 */
 .box4-3 {
-    width: 100%;
-    left: 50%;
-    
+    width: 80%;
+    height: 50vh;
+    background-color:#F84C26;
+    border-radius: 0px 0px 12px 12px;
+    padding: 50px;
 }
+.box4-3 ul {}
+.box4-3 li {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.box4-3 li a {
+    display: block;
+    color: #F7F6F2;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    justify-content: space-around;
+}
+.box4-3 li a strong {
+    color: #F7F6F2;
+    font-weight: 500;
+    font-size: 30px;
+}
+.box4-3 li span {
+    color: #F7F6F2;
+    font-size: 25px;
+}
+
+.box4-3 a {
+    display: block;
+    padding: 0 50px;
+
+}
+
 
 
 
 /* 이벤트 구간 설정 */
 .box5 {
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     background-color: #F7F6F2;
     padding-top: 100px;
     padding-bottom: 100px;
@@ -529,13 +600,11 @@ color: #F84C26;
 
 .enTitle strong {
     font-style: normal;
-    font-weight: 700;
     font-size: 40px;
     color: #F84C26;
 }
 .enTitle span {
 font-style: normal;
-font-weight: 400;
 font-size: 40px;
 color: #F84C26;
 }
@@ -547,24 +616,324 @@ color: #F84C26;
     font-size: 18px;
 }
 
-
+/* 이벤트 본문 */
 .box5-2 {
     display: flex;
     width: 80%;
+    margin-left: 10%;
+    justify-content: center;
+}
+.box5-2-1 {
+    margin-right: 50px;}
+.box5-2-1 a {}
+
+
+/* 이벤트 텍스트 */
+
+.box5-2-2 {}
+/* 이벤트 타이틀  */
+.conTitle {
+    margin-bottom: 15px;}
+.conTitle span {
+    display: inline-block;
+    font-size: 25px;
+    font-style: normal;
+    color: #F84C26;
+}
+.conTitle strong {
+    display: block;
+    font-size: 35px;
+    font-weight: bold;
+    color: #F84C26;
+
+}
+
+/* 이벤트 내용 */
+
+.en_p-1 {
+    font-style: normal;
+    font-weight: 350;
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 94px;
+}
+
+.en_p-2 {
+    font-style: normal;
+    font-weight: 350;
+    font-size: 25px;
+    color: #F84C26;
+}
+.en_p-3 {
+    font-weight: bold;
+    font-size: 25px;
+    color: #F84C26;
+
 }
 
 
-.box5-2-1 {}
-.box5-2-1 a {}
-.box5-2-1 img {}
 
-.box5-2-2 {}
-.box5-2-2 h2 {}
-.box5-2-2 p {}
 
+
+/* 프로그램 본문 내용 컨트롤하기가 어렵습니다 */
 
 /* 프로그램 설정 */
-.box6 {}
+
+.box6 {
+    width: 100%;
+    background-color: #F7F6F2;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+/* 프로그램 타이틀 설정 */
+.box6-1 {
+    display: flex;
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+    border-bottom: #F84C26 2px solid;
+    border-top: #F84C26 2px solid;
+    margin-bottom: 100px;
+
+}
+.proTitle {width: 30%;}
+
+.proTitle strong {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    color: #F84C26;
+}
+.proTitle span {
+font-style: normal;
+font-weight: 400;
+font-size: 40px;
+color: #F84C26;
+}
+.proTxt {width: 50%;}
+.proTxt {
+    color: #F84C26;
+    font-style: normal;
+    font-weight: 350;
+    font-size: 18px;
+}
+/* 프로그램 본문 설정 */
+
+.box6-2 {
+    display: flex;
+    width: 80%;
+    height: 80vh;
+    background-color: aqua;
+    margin-left: 10%;
+    margin-right: 20px;}
+    
+.pro1 {}
+.pro1 a {}
+.pro1 a>img {max-width: 100%;}
+
+.pro_Txt {
+    margin-top: 30px;
+}
+
+/* .pro_Txt span {
+    display: inline-block;
+    margin-bottom: 18px;
+    background-color: #414042;
+    font-size: 16px;
+    padding: 5px 15px;
+    color: #fff;
+    text-align: center;
+    box-sizing: border-box;
+    vertical-align: middle;
+    } */
+.pro_Txt .la_b {
+    display: inline-block;
+    margin-bottom: 18px;
+    background-color: #202020;
+    font-size: 16px;
+    padding: 5px 15px;
+    color: #fff;
+    text-align: center;
+    box-sizing: border-box;
+    vertical-align: middle;
+    }
+    .pro_Txt .la_w {
+        display: inline-block;
+        margin-bottom: 18px;
+        background-color: #F7F6F2;
+        border: #202020 1px solid;
+        font-size: 16px;
+        padding: 4px 15px;
+        color: #202020;
+        text-align: center;
+        box-sizing: border-box;
+        vertical-align: middle;
+        }
+.proTxt a {}
+.proTxt p {}
+
+
+
+
+/* .pro ul {
+    display: flex;
+    padding: 20px;}
+.pro ul li {
+    width: 100%;
+    padding: 15px;
+}
+.pro li a {}
+.pro a img {max-width: 100%;} */
+
+
+
+
+/* 오시는길 구간 설정 */
+.box7 {
+    width: 100%;
+    height: 100vh;
+    background-color: #F7F6F2;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+}
+
+/* 오시는길 타이틀 설정 */
+.box7-1 {
+    display: flex;
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+    border-bottom: #F84C26 2px solid;
+    border-top: #F84C26 2px solid;
+    margin-bottom: 100px;
+}
+
+.mapTitle {width: 30%;}
+
+.mapTitle strong {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    color: #F84C26;
+}
+.mapTitle span {
+font-style: normal;
+font-weight: 400;
+font-size: 40px;
+color: #F84C26;
+}
+.mapTxt {width: 50%;}
+.mapTxt {
+    color: #F84C26;
+    font-style: normal;
+    font-weight: 350;
+    font-size: 18px;
+}
+
+/* 오시는 길 본문 설정 */
+.map {
+    width: 80%;
+    overflow: hidden;
+    margin: auto;
+    margin-bottom: 30px;}
+
+.box7-2 {
+    margin-bottom: 30px;
+}
+.box7-2 img {max-width: 100%;}
+
+.box7-3 {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 푸터 설정 */
+
+footer {
+    width: 100%;
+    height: 20vh;
+    background-color: #F84C26;
+    position: relative;
+    z-index: 12;
+}
+
+.foot {
+    padding: 20px;
+}
+.icon {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 40px;
+}
+
+.sns {
+    color: #F7F6F2;
+    font-size: 35px;
+    
+}
+
+.fo_logo {
+}
+.fo_logo img {width: 50%;}
+
+.copyTxt {
+    display: flex;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #F7F6F2;
+}
+.copyTxt ul{
+    color: #F7F6F2;
+}
+.copyTxt li {
+    vertical-align: middle;
+}
+.copyTxt li:nth-child(1) {
+    padding: 0 10px;
+    color: #F7F6F2;
+    font-style: normal;
+    font-size: 16px;
+    /* border-right: 1px solid #F7F6F2; */
+}
+.copyTxt li:nth-child(2) {
+    padding: 0 10px;
+    color: #F7F6F2;
+    font-style: normal;
+    font-size: 16px;
+    /* border-right: 1px solid #F7F6F2; */
+}
+.copyTxt li:nth-child(3) {
+    padding: 0 10px;
+    color: #F7F6F2;
+    font-style: normal;
+    font-size: 16px;
+}
+.copyTxt li span{
+    color: #F7F6F2;
+    margin-left: 20px;
+}
+.copy {
+    color: #F7F6F2;
+    font-size: 16px;
+    font-style: normal;
+    padding: 0 15px;
+}
+
+
+
 
 
 
