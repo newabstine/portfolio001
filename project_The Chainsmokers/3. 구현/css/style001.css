@@ -1,0 +1,568 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {margin: 0; padding: 0;}
+a {text-decoration: none; color: #000;}
+ul,ol {list-style: none;}
+img {vertical-align: bottom;}
+::selection {
+    background: #fff700; }
+
+
+
+/* 헤더 설정 */
+header {
+    width: 100%;
+    height: 60px;
+    /* background-color: rgba(0, 0, 0, 0.1); */
+    /* 배경지우기 */
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    box-sizing: border-box;
+}
+header nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    /* background-color: #fff700; */
+}
+
+/* 로고설정 */
+header nav h1 {
+    width: 10%;
+    height: 60px;
+    background-image: url(../img/logo/logoB.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    cursor: pointer;
+    /* background-color: rgb(164, 24, 245); */
+    margin-left: 2%;
+}
+
+header nav h1 a {
+    /* background-color: #fff700; */
+}
+
+
+header nav p {
+    width: 10%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    /* background-color: cadetblue; */
+    font-size: 14px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    color: #343434;
+}
+/* 메뉴설정 */
+header nav .menu {
+    width: 30%;
+    height: 60px;
+    /* background-color: #00ffc8; */
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    margin-left: 500px;
+}
+
+header nav .menu li {
+    width: 100%;
+    padding: 10px;
+    /* background-color: rgba(0, 0, 255, 0.404); */
+}
+header nav .menu li a {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 16px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    color: #343434;
+    /* background-color: blueviolet; */
+}
+
+/* 메뉴호버 */
+header nav .menu li:hover a {
+    font-weight: 600;
+}
+
+/* 햄버거 버튼 설정 */
+header nav .menu-trigger {
+    width: 50px;
+    height: 17px;
+    /* background-color: red; */
+    margin-right: 2%;
+}
+header nav .menu-trigger>span {
+    width: 50px;
+    height: 2px;
+    display: block;
+    margin-bottom: 5px;
+    background-color: #343434;
+    transition: all 0.5s;
+}
+/* 햄버거 버튼 호버 설정 */
+.menu-trigger:hover span:nth-child(1) {
+    transform: rotate(16deg) ;
+    transform-origin: left center;
+}
+.menu-trigger:hover span:nth-child(2) {
+    opacity: 0;
+}   
+.menu-trigger:hover span:nth-child(3) {
+    transform: rotate(-16deg) ;
+    transform-origin: left center;
+    }   
+
+/* 배경 설정 */
+
+section {
+    width: 100%;
+    height: 100vh;
+}
+
+/* 첫번째 섹션 설정 */
+
+section:nth-child(1) {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+}
+/* 배경 설정 */
+section:nth-child(1) .bg {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/BG/BGp.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+/* 배경 텍스트1 */
+section:nth-child(1) .bg ul {
+    position: absolute;
+    width: 3000px;
+    height: 400px;
+    left: 0;
+    top: 50%;
+    margin-top: -200px;
+}
+section:nth-child(1) .bg ul li img {width: 100%;}
+section:nth-child(1) .bg ul li {
+    width: 500px;
+    height: 200px;
+    left: 0;
+    top: 0;
+}
+
+/* 배경 텍스트 애니메이트 설정 */
+
+section:nth-child(1) .bg ul li .bgt1 {
+    position: absolute;
+    left: 0;
+    animation: ani1 100s linear infinite;
+}
+section:nth-child(1) .bg ul li .bgt2 {
+    position: absolute;
+    left: -100%;
+    animation: ani2 100s linear infinite;
+}
+
+section:nth-child(1) .bg ul li .bgt3 {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    animation: ani3 100s linear infinite;
+}
+section:nth-child(1) .bg ul li .bgt4 {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    animation: ani4 100s linear infinite;
+}
+
+
+/* 애니메이트 키프레임 설정 */
+@keyframes ani1 {
+    0% {left: 0;}
+    50% {left: 100%;}
+    50.0001% {left: 0;}
+    100% {left: 100%;}
+}
+@keyframes ani2 {
+    0% {left: -100%;}
+    50% {left: 0;}
+    50.0001% {left: -100%;}
+    100% {left: 0;}
+}
+@keyframes ani3 {
+    0% {left: 0;}
+    50% {left: -100%;}
+    50.0001% {left: 0;}
+    100% {left: -100%;}
+}
+@keyframes ani4 {
+    0% {left: 100%;}
+    50% {left: 0;}
+    50.0001% {left: 100%;}
+    100% {left: 0;}
+}
+
+/* 메인 비디오 이미지 */
+
+section:nth-child(1) .main {
+    width: 100%;
+    height: 100%;
+}
+section:nth-child(1) .main .mainbox {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /* background-color: transparent; */
+}
+
+/* 커버 이미지 설정 */
+
+section:nth-child(1) .main .mainbox li {
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    overflow: hidden;
+}
+
+section:nth-child(1) .main .mainbox li:nth-child(1) {
+    width: 200px;
+    height: 280px;
+    left: 10%;
+    top: 45%;
+    background-image: url(../img/album/a6-1.jpg);
+    background-color: #fff700;
+    /* overflow: hidden; */
+}
+section:nth-child(1) .main .mainbox li:nth-child(2) {
+    width: 280px;
+    height: 280px;
+    left: 25%;
+    top: 15%;
+    background-image: url(../img/album/a9.jpg);
+    background-color: #fff700;
+    /* overflow: hidden; */
+}
+section:nth-child(1) .main .mainbox li:nth-child(3) {
+    width: 230px;
+    height: 330px;
+    left: 28%;
+    bottom: 10%;
+    background-image: url(../img/album/a2-2.jpg);
+    background-color: #fff700;
+    /* overflow: hidden; */
+}
+section:nth-child(1) .main .mainbox li:nth-child(4) {
+    width: 450px;
+    height: 300px;
+    left: 45%;
+    bottom: 20%;
+    background-image: url(../img/img/cctv1-2.jpg);
+    background-position: center;
+    background-color: #fff700;
+    /* overflow: hidden; */
+}
+section:nth-child(1) .main .mainbox li:nth-child(5) {
+    width: 400px;
+    height: 200px;
+    right: 27%;
+    top: 18%;
+    background-image: url(../img/th/TheChainsmokers1-1.jpg);
+    background-color: #fff700;
+    /* overflow: hidden; */
+}
+section:nth-child(1) .main .mainbox li:nth-child(6) {
+    width: 200px;
+    height: 280px;
+    right: 10%;
+    bottom: 35%;
+    background-image: url(../img/album/a7-1.jpg);
+    background-color: #fff700;
+    /* overflow: hidden; */
+}
+
+
+/* 이미지 호버 동영상 설정 */
+section:nth-child(1) .main .mainbox li video {
+    height: 100%;
+    display: none;
+}
+section:nth-child(1) .main .mainbox li:hover video {
+    display: block;
+}
+
+/* 비디오 상세 설정 */
+section:nth-child(1) .main .mainbox li:nth-child(1) video {
+    transform: translate(-100px);
+}
+section:nth-child(1) .main .mainbox li:nth-child(2) video {
+    transform: translate(-50px);
+}
+section:nth-child(1) .main .mainbox li:nth-child(3) video {
+    transform: translate(-160px);
+}
+section:nth-child(1) .main .mainbox li:nth-child(4) video {
+    transform: translate(-40px);
+}
+section:nth-child(1) .main .mainbox li:nth-child(5) video {
+    height: 150%;
+    transform: translate(-66.5px,-50px);
+}
+section:nth-child(1) .main .mainbox li:nth-child(6) video {
+    transform: translate(-120px);
+}
+
+/* 메인 텍스트  */
+section:nth-child(1) .maintxt {
+    width: 500px;
+    height: 130px;
+    position: absolute;
+    left: 10%;
+    bottom: 5%;
+    /* background-color: #fff700; */
+}
+
+section:nth-child(1) .maintxt ul {
+    width: 100%;
+    height: 100%;
+}
+section:nth-child(1) .maintxt ul li {
+    font-size: 40px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    color: #fff;
+    margin-top: -15px;
+}
+
+
+/* 두번쨰 페이지 */
+section:nth-child(2) {
+    width: 100%;
+    height: 100vh;
+}
+
+/* 배경설정 */
+
+section:nth-child(2) .bg1 {
+    width: 100%;
+    height: 100vh;
+    background-color: #9f89db;
+    /* background-image: url(../img/BG/BGb.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px;
+    box-sizing: border-box; */
+}
+section:nth-child(2) .bg1 .title {
+    width: 96%;
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+    /* background-color: #002fff; */
+    margin: 0 auto;
+}
+/*  앨범 탭바 상단 설정 */
+section:nth-child(2) .bg1 .title ul {
+    width: 84%;
+    display: flex;
+    /* justify-content: center; */
+    margin: 0 auto;
+    /* background-color: aqua; */
+}
+section:nth-child(2) .bg1 .title ul li {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Jost', sans-serif;
+    color: #343434;
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    /* background-color: #fff700; */
+    transition: all 0.5s;
+}
+section:nth-child(2) .bg1 .title ul li:nth-child(1) {
+    color: #fff;
+}
+section:nth-child(2) .bg1 .title ul li:hover {
+    color: #fff;
+}
+
+
+/* 앨범 탭바 여백 */
+section:nth-child(2) .bg1 .ma {
+    width: 96%;
+    height: 50px;
+    margin: 0 auto;
+}
+section:nth-child(2) .bg1 .txt {
+    width: 100%;
+}
+
+
+
+
+/* 앨범 첫번쨰 */
+section:nth-child(2) .bg1 .txt ul {
+    width: 100%;
+    border-top: 1px solid #343434;
+    /* background-color: aqua; */
+}
+
+section:nth-child(2) .bg1 .txt ul li {
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid #343434;
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+}
+
+/* 화살표 설정 */
+section:nth-child(2) .bg1 .txt ul li .arr {
+    width: 0%;
+    height: 40px;
+    background-image: url(../img/img/arrow.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.8s;
+    opacity: 0;
+    /* background-color: #fff700; */
+}
+/* 넘버링 설정 */
+section:nth-child(2) .bg1 .txt ul li span {
+    width: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: crimson; */
+    font-size: 30px;
+    font-weight: 300;
+    font-family: 'Jost', sans-serif;
+}
+/* 수록곡 설정 */
+section:nth-child(2) .bg1 .txt ul li p {
+    width: 90%;
+    /* background-color: chartreuse; */
+    font-size: 46px;
+    font-weight: 300;
+    font-family: 'Jost', sans-serif;
+    color: #343434;
+}
+section:nth-child(2) .bg1 .txt ul li:hover .arr {
+    width: 5%;
+    opacity: 1;
+}
+
+
+/* section:nth-child(2) .bg1 .txt {
+    box-sizing: border-box;
+}
+section:nth-child(2) .bg1 .txt ul {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #343434;
+    cursor: pointer;
+}
+section:nth-child(2) .bg1 .txt ul:nth-child(1) {
+    border-top: 1px solid #343434;
+} */
+
+/* li 설정 */
+/* section:nth-child(2) .bg1 .txt ul li {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+} */
+
+/* 화살표 li 설정 */
+/* section:nth-child(2) .bg1 .txt ul li:nth-child(1) {
+    width: 0%;
+    height: 80px;
+    transition: all 0.8s;
+    opacity: 0;
+} */
+
+/* 화살표 상세 설정 */
+/* section:nth-child(2) .bg1 .txt ul li:nth-child(1) .arr {
+    width: 100%;
+    height: 40px;
+    transition: all 0.8s;
+    background-image: url(../img/img/arrow.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+section:nth-child(2) .bg1 .txt ul:hover li:nth-child(1) {
+    width: 5%;
+    opacity: 1;
+} */
+
+
+/* 넘버링 설정 */
+/* section:nth-child(2) .bg1 .txt ul li:nth-child(2) {
+    width: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section:nth-child(2) .bg1 .txt ul li:nth-child(2) span {
+    font-size: 30px;
+    font-weight: 300;
+    font-family: 'Jost', sans-serif;
+} */
+
+/* 수록곡 설정 */
+/* section:nth-child(2) .bg1 .txt ul li:nth-child(3) {
+    width: 91%;
+}
+section:nth-child(2) .bg1 .txt ul li:nth-child(3) p {
+    width: 100%;
+    font-size: 46px;
+    font-weight: 300;
+    font-family: 'Jost', sans-serif;
+    color: #343434;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* section:nth-child(2) .bg2 {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/BG/BGp2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}  */
